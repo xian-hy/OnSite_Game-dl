@@ -15,17 +15,17 @@
 test_conf.py文件的作用是设置测试方法及可视化选择。
 
 然后，在planner文件夹下编写__main__.py文件，这是规控器的主函数，也可作为onsite库与规控算法之间的接口。__main__.py中代码编写如下：
-`from onsite import scenarioOrganizer, env
-import os
+`from onsite import scenarioOrganizer, env`
+`import os`
 
-def check_dir(target_dir):
-    if not os.path.exists(target_dir):
-        os.makedirs(target_dir)
+`def check_dir(target_dir):`
+    `if not os.path.exists(target_dir):`
+        `os.makedirs(target_dir)`
 
-if __name__ == "__main__":
-    # 指定输入输出文件夹位置
-    input_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '../inputs'))
-    output_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '../outputs'))
+`if __name__ == "__main__":`
+    `# 指定输入输出文件夹位置`
+    `input_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '../inputs'))`
+    `output_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '../outputs'))`
 
     # 检查输出路径
     check_dir(output_dir)
